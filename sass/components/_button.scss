@@ -1,0 +1,83 @@
+/* COMPONENT: Button */
+
+// BUTTON INLINE
+.btn-inline {
+  border: none;
+  color: var(--color-primary);
+  font-size: inherit;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 2px;
+  display: inline-block;
+  background-color: transparent;
+  cursor: pointer;
+  transition: all 0.2s;
+
+  &:hover {
+    color: var(--color-grey-dark-1);
+    outline: none;
+    animation: pulsate 1s infinite;
+
+    span {
+      margin-left: 8px;
+    }
+  }
+
+  & span {
+    margin-left: 3px;
+    transition: margin-left 0.2s;
+  }
+}
+
+// BUTTON
+.btn {
+  font-size: 1.5rem;
+  font-weight: var(--font-light);
+  text-transform: uppercase;
+  border-radius: var(--border-radius-rounded);
+  border: none;
+  background-image: linear-gradient(
+    to right,
+    var(--color-pimary-light),
+    var(--color-primary-dark)
+  );
+  color: var(--color-white);
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+
+  & > * {
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    transition: all 0.2s;
+  }
+
+  &--visible {
+    padding: 2rem 7.5rem;
+  }
+
+  &--invisible {
+    position: absolute;
+    padding: 2rem 0;
+    top: -100%;
+    left: 0;
+  }
+
+  &:hover {
+    background-image: linear-gradient(
+      to left,
+      var(--color-pimary-light),
+      var(--color-primary-dark)
+    );
+    outline: none;
+    animation: pulsate 1s infinite;
+  }
+
+  &:hover &--visible {
+    transform: translateY(100%);
+  }
+
+  &:hover &--invisible {
+    top: 0;
+  }
+}

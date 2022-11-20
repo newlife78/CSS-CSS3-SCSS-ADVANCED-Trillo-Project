@@ -1,0 +1,16 @@
+/* PROJECT TYPPOGRAPHY */
+
+/* Body Typography */
+body {
+  font-family: var(--font-family);
+  font-weight: var(--font-regular);
+  line-height: var(--line-height);
+  color: var(--color-grey-dark-2);
+}
+
+/* Header Typography */
+
+/* Detail Layout Typography */
+.paragraph:not(:last-of-type) {
+  margin-bottom: 2rem;
+}

@@ -1,0 +1,36 @@
+/* PROJECT BASIC SETTINGS */
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  // Defines the value for 1rem throughout the entire project
+  font-size: 62.5%; //1rem = 10px;  10px/16px = 62.5%
+
+  @include respond(tab-land) {
+    font-size: 50%;
+  }
+}
+
+body {
+  box-sizing: border-box;
+  background-image: linear-gradient(
+    to right bottom,
+    var(--color-primary),
+    var(--color-primary-dark)
+  );
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  min-height: 100vh;
+}
+
+::selection {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}

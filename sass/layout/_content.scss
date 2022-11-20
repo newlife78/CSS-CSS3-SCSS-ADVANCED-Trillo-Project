@@ -1,0 +1,9 @@
+/* PROJECT LAYOUT: Content */
+
+.content {
+  display: flex;
+
+  @include respond(tab-port) {
+    flex-direction: column;
+  }
+}
