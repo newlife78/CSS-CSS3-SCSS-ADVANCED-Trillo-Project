@@ -1,5 +1,13 @@
 /* PROJECT MIXINS */
 
+@mixin clearfix {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
 //MEDIA QUERY MANAGER
 /*
   0 - 600px:    Phone
